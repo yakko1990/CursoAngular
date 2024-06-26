@@ -7,10 +7,9 @@
       let isLast = last;
       let isEven = even;
       let isOdd = odd;
-      "
-
-      class="list-group-item"
+      "class="list-group-item d flex justify-content-between align-items-center"
       [ngClass]="{'list-group-item-success':isFirst}">
+
       <span class="text-primary">{{i + 1 }})</span>
       <span>{{character.name}} - </span>
       <strong>Power:</strong>
@@ -22,6 +21,7 @@
       <span> Es par {{isOdd}}</span>
       <!-- Aunque Even sea par y Odd signifique impar en este caso estan cambiado puesto que el index empieza en (i + 1) -->
 
+      <button (click)="onDeleteCharacter(character.id!)" class="btn btn-danger">X</button>
 
     </li>
 
